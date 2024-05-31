@@ -198,7 +198,6 @@
 							<goal>run</goal>
 						</goals>
 					</execution>
-					-->
 					<execution>
 						<id>icons</id>
 						<?m2e execute onConfiguration,onIncremental?>
@@ -215,6 +214,7 @@
 							<goal>run</goal>
 						</goals>
 					</execution>
+					-->
 				</executions>
 			</plugin>
 		</plugins>
