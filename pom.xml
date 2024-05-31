@@ -48,10 +48,6 @@
 			<version>2.8.6</version>
 		</dependency>
 	</dependencies>
-	<scm>
-		<connection>scm:git:http://hardin:8080/scm/git/vtk/saavtk</connection>
-		<developerConnection>scm:git:http://hardin:8080/scm/git/vtk/saavtk</developerConnection>
-	</scm>
 	<!-- Issue Management - TO BE UPDATED -->
 	<issueManagement>
 		<system>Quiver</system>
