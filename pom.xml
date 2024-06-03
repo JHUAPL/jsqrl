@@ -6,7 +6,7 @@
 	<packaging>jar</packaging>
 	<version>0.0.1</version>   
 	<name>jsqrl</name>
-	<description>VTK Support library</description>
+	<description>General purpose state/object save and restore utilities</description>
     <organization>
 	  <name>Johns Hopkins University Applied Physics Lab</name>
 	  <url>https://www.jhuapl.edu</url>
@@ -28,7 +28,6 @@
 	  <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	  <maven.compiler.source>16</maven.compiler.source>
 	  <maven.compiler.target>16</maven.compiler.target>
-	  <vtkVersion>1.0.0.25</vtkVersion>
 	</properties>
 	<dependencies>
 		<dependency>
