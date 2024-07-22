@@ -1,5 +1,7 @@
 # Jsqrl
 
+![GitHub last commit](https://img.shields.io/github/last-commit/JHUAPL/jsqrl)
+
 Jsqrl (pronounced "Jay Squirrel") is a general use, low level Java library for saving/restoring the state of Java objects to/from JSON format files.
 
 
