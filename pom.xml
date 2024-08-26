@@ -49,20 +49,10 @@
     </scm>
     
     <distributionManagement>
-    <repository>
-        <id>central</id>
-        <name>surfshop-releases</name>
-        <url>http://surfshop.jhuapl.edu:8081/artifactory/libs-release-local</url>
-    </repository>
-    <snapshotRepository> 
-        <id>central</id>
-        <name>surfshop-snapshots</name>
-        <url>http://surfshop.jhuapl.edu:8081/artifactory/libs-snapshot-local</url>
-    </snapshotRepository>
-    <!--<snapshotRepository>
-        <id>ossrh</id>
-        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      </snapshotRepository> -->
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
     
     <properties>
@@ -71,6 +61,45 @@
       <maven.compiler.source>16</maven.compiler.source>
       <maven.compiler.target>16</maven.compiler.target>
     </properties>
+    
+    <profiles>
+        <profile>
+            <id>internal</id>
+            <distributionManagement>
+                <repository>
+                    <id>central</id>
+                    <name>surfshop-releases</name>
+                    <url>http://surfshop.jhuapl.edu:8081/artifactory/libs-release-local</url>
+                </repository>
+                <snapshotRepository> 
+                    <id>central</id>
+                    <name>surfshop-snapshots</name>
+                    <url>http://surfshop.jhuapl.edu:8081/artifactory/libs-snapshot-local</url>
+                </snapshotRepository>
+            </distributionManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                </plugin>
+        </plugins>
+        </profile>
+    </profiles>
     
 	<build>
         <pluginManagement>
@@ -198,7 +227,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
             </plugin>
-<!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
@@ -207,7 +235,6 @@
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
             </plugin>
--->
         </plugins>
     </build>
 	
