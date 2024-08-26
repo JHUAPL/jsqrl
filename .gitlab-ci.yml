@@ -71,7 +71,7 @@ maven build:
   stage: build
   script: 
     # --- Checks if code compiles
-    - mvn $MAVEN_CLI_OPTS clean compile
+    - mvn $MAVEN_CLI_OPTS -U clean compile
   rules:
     - if: '$GITLAB_USER_LOGIN != $RUNNER_USER_LOGIN && $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE == "push"'
       when: always
