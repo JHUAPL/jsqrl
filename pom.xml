@@ -49,10 +49,15 @@
     </scm>
     
     <distributionManagement>
-      <snapshotRepository>
+        <repository>
+        <id>central</id>
+        <name>surfshop-snapshots</name>
+        <url>http://surfshop.jhuapl.edu:8081/artifactory/libs-snapshot-local</url>
+        </repository>
+     <!-- <snapshotRepository>
         <id>ossrh</id>
         <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      </snapshotRepository>
+      </snapshotRepository> -->
     </distributionManagement>
     
     <properties>
