@@ -1,23 +1,24 @@
-<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	
-	<groupId>edu.jhuapl.ses.jsqrl</groupId>
-	<artifactId>jsqrl</artifactId>
-	<packaging>jar</packaging>
-	<version>1.0.0-SNAPSHOT</version>   
-	<name>jsqrl</name>
-	<description>General purpose state/object save and restore utilities</description>
+<project xmlns="https://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>edu.jhuapl.ses.jsqrl</groupId>
+    <artifactId>jsqrl</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>jsqrl</name>
+    <description>General purpose state/object save and restore utilities</description>
 
     <url>https://github.com/JHUAPL/jsqrl</url>
 
-	<inceptionYear>2024</inceptionYear>
+    <inceptionYear>2024</inceptionYear>
     <organization>
         <name>Johns Hopkins University Applied Physics Laboratory</name>
         <url>https://www.jhuapl.edu/</url>
     </organization>
-	
-	<licenses>
+
+    <licenses>
         <license>
             <name>MIT License</name>
             <url>https://opensource.org/license/mit/</url>
@@ -40,28 +41,28 @@
             <organizationUrl>https://www.jhuapl.edu/</organizationUrl>
         </developer>
     </developers>
-    
+
     <scm>
         <connection>scm:git:https://github.com/JHUAPL/jsqrl.git</connection>
         <url>https://github.com/JHUAPL/jsqrl.git</url>
         <developerConnection>scm:git:https://github.com/JHUAPL/jsqrl.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-    
+
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
-    
+
     <properties>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-      <maven.compiler.source>16</maven.compiler.source>
-      <maven.compiler.target>16</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
     </properties>
-    
+
     <profiles>
         <profile>
             <id>internal</id>
@@ -69,12 +70,14 @@
                 <repository>
                     <id>central</id>
                     <name>surfshop-releases</name>
-                    <url>http://surfshop.jhuapl.edu:8081/artifactory/libs-release-local</url>
+                    <url>
+                        http://surfshop.jhuapl.edu:8081/artifactory/libs-release-local</url>
                 </repository>
-                <snapshotRepository> 
+                <snapshotRepository>
                     <id>central</id>
                     <name>surfshop-snapshots</name>
-                    <url>http://surfshop.jhuapl.edu:8081/artifactory/libs-snapshot-local</url>
+                    <url>
+                        http://surfshop.jhuapl.edu:8081/artifactory/libs-snapshot-local</url>
                 </snapshotRepository>
             </distributionManagement>
             <build>
@@ -102,8 +105,8 @@
             </build>
         </profile>
     </profiles>
-    
-	<build>
+
+    <build>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -210,18 +213,18 @@
         </pluginManagement>
         <sourceDirectory>src</sourceDirectory>
         <plugins>
-          <plugin>
+            <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-          </plugin>
-          <plugin>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
             </plugin>
-          <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-          </plugin>
-          <plugin>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
@@ -239,23 +242,23 @@
             </plugin>
         </plugins>
     </build>
-	
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>31.1-jre</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.8.6</version>
-		</dependency>
-	</dependencies>	
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.6</version>
+        </dependency>
+    </dependencies>
 </project>
