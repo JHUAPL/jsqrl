@@ -15,7 +15,7 @@ Jsqrl is available as a jar at [Maven Central](https://central.sonatype.com/arti
 <dependency>
     <groupId>edu.jhuapl.ses</groupId>
     <artifactId>jsqrl</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
